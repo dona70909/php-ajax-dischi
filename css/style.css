@@ -1,6 +1,7 @@
 header {
     background-color: rgb(49, 74, 97);
     padding:1rem 2rem;
+    height: 5rem;
 }
 
 .header-logo {
@@ -9,16 +10,26 @@ header {
 
 main {
     padding: 2rem;
-    background-color: rgb(30, 45, 59) ;
+    background-color: rgb(30, 45, 59);
+    height: calc(100vh - 5rem);
+    overflow: auto;
+}
+
+.section {
+    height: 100%;
+}
+
+.dischi-wrapper {
+    height: 100%;
 }
 
 .dischi-wrapper {
     gap: 1rem 2rem;
     justify-content: center;
+    height: 100%;
 }
 
 .card {
-    width: calc(100% / 6);
     background-color: #2e3a46;
 }
 
@@ -31,5 +42,5 @@ main {
 }
 
 main img {
-    padding: 1.8rem;
+    padding: 1rem;
 }
