@@ -4,12 +4,19 @@ const app = new Vue ({
 
     data() {
         return {
-            disci : [],
+            dischi : [],
         }
     },
 
     created() {
-        axios.get("")
+        axios.get("http://localhost/php-ajax-dischi/server/dischi.php")
+        .then((response) => {
+            this.dischi = response.data.response;
+            console.log(response);
+        })
+        .catch((error) => {
+            console.error(error);
+        })
     },
 
 })

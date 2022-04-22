@@ -1,8 +1,4 @@
-<?php 
-    include_once __DIR__ . "/../php-ajax-dischi/server/dischi.php";
 
-    /* var_dump($db_dischi); */
-?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -28,15 +24,22 @@
 
 <body>
 
-    <header>
-        <h1>Boolify</h1>
-    </header>
+    <div id ="app">
+        <header>
+            <h1>Boolify</h1>
+        </header>
 
-    <main>
-    </main>
+        <main>
+            <div v-for ="disco in dischi">
+                <h1>{{disco.title}}</h1>
+            </div>
+        </main>
 
+        
+    </div>
+    
 
     <!--javascript-->
-    <script type="text/javascript" src="js/myscript.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
