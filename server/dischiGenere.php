@@ -1,6 +1,8 @@
 <?php
     include __DIR__ . "/data.php";
 
+    header('Content-Type: application/json');
+    
     $genere = $_GET["genere"];
 
     function filter_array($db_dischi,$genere) {

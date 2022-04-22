@@ -29,6 +29,7 @@ const app = new Vue ({
         .then((response) => {
             this.filteredDischi = response.data.response;
             console.warn("http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=" + this.changeGenere());
+            console.log( this.filteredDischi = response.data.response);
         })
         .catch((error) => {
             console.error(error);
