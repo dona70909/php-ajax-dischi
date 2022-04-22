@@ -30,9 +30,18 @@
         </header>
 
         <main>
-            <div v-for ="disco in dischi">
-                <h1>{{disco.title}}</h1>
-            </div>
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-2" v-for ="disco in dischi">
+                        <img class="card-img-top img-fluid" :src="disco.poster" :alt="disco.title">
+                        <div class="card-body">
+                            <h5 class="card-title">{{disco.title}}</h5>
+                            <p class="card-text">{{disco.year}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         
