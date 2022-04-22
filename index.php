@@ -26,6 +26,7 @@
 <body>
 
     <header>
+        <h1>Boolify</h1>
     </header>
 
     <main>
