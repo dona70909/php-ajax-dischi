@@ -14,26 +14,23 @@ const app = new Vue ({
         }
     },
 
-    created() {
+    mounted() {
         axios.get("http://localhost/php-ajax-dischi/server/dischi.php")
         .then((response) => {
             this.dischi = response.data.response;
-            //console.log(response);
         })
         .catch((error) => {
             console.error(error);
         }),
 
-        console.warn("http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=" + this.changeGenere());
-        axios.get('http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=' + this.changeGenere())
+        axios.get('http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=' + this.selectGenere)
         .then((response) => {
-            this.filteredDischi = response.data.response;
-            console.warn("http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=" + this.changeGenere());
-            console.log( this.filteredDischi = response.data.response);
+            this.filteredDischi = response.data.response;    
+            console.error(this.selectGenere + "noy ")       
         })
         .catch((error) => {
             console.error(error);
-        })
+        }) 
     },
 
     methods: {
@@ -49,8 +46,22 @@ const app = new Vue ({
         },
 
         changeGenere() {
-            return this.selectGenere;
-        }
+            axios.get('http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=' + this.selectGenere)
+            .then((response) => {
+                this.filteredDischi = response.data.response;    
+                console.error(this.selectGenere + "noy ")       
+            })
+            .catch((error) => {
+                console.error(error);
+            })
+        } 
     },
+
+    watch()  {
+        this.selectGenere;
+        this.changeGenere();
+        
+    }
+
 
 })
