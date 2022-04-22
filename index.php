@@ -25,44 +25,12 @@
 <body>
 
     <div id ="app">
-        <header>
-            <section class="container-fluid">
-                <div class="row justify-content-between align-content-center">
-                    <div class="col-2">
-                        <img class="header-logo" src="css/img/logo-small.png" alt="logo">
-                    </div>
-                    <div class="col-4">
-                        <select @change="changeGenere()" v-model="selectGenere" class="form-select" name="" id="">
-                            <option class="text-white bg-dark" value=""> All Genres </option>
-                            <option class="text-white bg-dark" v-for = "genere in  generiDischi()" :value="genere">
-                                {{genere}}
-                            </option>
-                        </select>
-                    </div>
 
-                    <p>{{selectGenere}}</p>
-                </div>
-            </section>
-        </header>
 
-        <main>
-            <section class="container-fluid">
-                <div class="row">
-                    <div class="col-12 d-flex flex-wrap dischi-wrapper">
-                        <div class="card col-2" v-for ="disco in filteredDischi">
-                            <img class="card-img-top" :src="disco.poster" :alt="disco.title">
-                            <div class="card-body text-center p-0">
-                                <h5 class="card-title">{{disco.title}}</h5>
-                                <p class="card-artist mb-0">{{disco.author}}</p>
-                                <p class="card-year mb-0">{{disco.year}}</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <?php include_once __DIR__ . '/partials/header.php'?>
+        <?php include_once __DIR__ . '/partials/main.php'?>
 
-        </main>
+       
 
         
     </div>
