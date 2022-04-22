@@ -1,0 +1,20 @@
+header {
+    background-color: rgb(49, 74, 97);
+}
+main {
+    padding: 2rem;
+    background-color: rgb(30, 45, 59) ;
+}
+
+.dischi-wrapper {
+    gap: 1rem 2rem;
+    justify-content: center;
+}
+
+.card {
+    width: calc(100% / 6);
+}
+
+img {
+    padding: 1.8rem;
+}

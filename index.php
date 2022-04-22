@@ -12,7 +12,7 @@
     <!-- * CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- * MY CSS STYLE -->
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- * bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -26,17 +26,19 @@
 
     <div id ="app">
         <header>
-            <h1>Boolify</h1>
+            <h1 class="m-0">Boolify</h1>
         </header>
 
         <main>
             <section class="container-fluid">
                 <div class="row">
-                    <div class="col-2" v-for ="disco in dischi">
-                        <img class="card-img-top img-fluid" :src="disco.poster" :alt="disco.title">
-                        <div class="card-body">
-                            <h5 class="card-title">{{disco.title}}</h5>
-                            <p class="card-text">{{disco.year}}</p>
+                    <div class="col-12 d-flex flex-wrap dischi-wrapper">
+                        <div class="card" v-for ="disco in dischi">
+                            <img class="card-img-top img-fluid" :src="disco.poster" :alt="disco.title">
+                            <div class="card-body">
+                                <h5 class="card-title">{{disco.title}}</h5>
+                                <p class="card-text">{{disco.year}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
