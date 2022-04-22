@@ -55,6 +55,7 @@
                                 <h5 class="card-title">{{disco.title}}</h5>
                                 <p class="card-artist mb-0">{{disco.author}}</p>
                                 <p class="card-year">{{disco.year}}</p>
+                                <p>{{disco.genre}}</p>
                             </div>
                         </div>
                     </div>
