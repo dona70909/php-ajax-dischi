@@ -5,6 +5,12 @@ const app = new Vue ({
     data() {
         return {
             dischi : [],
+
+            selectGenere : "Rock",
+
+            filteredDischi : [],
+
+            listGeneri: [],
         }
     },
 
@@ -17,6 +23,28 @@ const app = new Vue ({
         .catch((error) => {
             console.error(error);
         })
+
+        axios.get('http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=' + selectGenere)
+        .then((response) => {
+            this.filteredDischi = response.data.response;
+            console.log(response);
+        })
+        .catch((error) => {
+            console.error(error);
+        })
+    },
+
+    methods: {
+        
+        generiDischi() {
+            this.dischi.forEach(element => {
+                if(!this.listGeneri.includes(element.genre)) {
+                    this.listGeneri.push(element.genre);
+                }
+            });
+
+            return this.listGeneri;
+        }
     },
 
 })

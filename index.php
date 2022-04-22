@@ -26,7 +26,21 @@
 
     <div id ="app">
         <header>
-            <img class="header-logo" src="css/img/logo-small.png" alt="logo">
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-5">
+                        <img class="header-logo" src="css/img/logo-small.png" alt="logo">
+                    </div>
+                    <div class="col-5">
+                        <select v-model="selectGenere" class="form-select" name="" id="">
+                            <option class="text-white bg-dark" value=""> All Artists </option>
+                            <option class="text-white bg-dark" v-for = "genere in  generiDischi()" :value="genere">
+                                {{genere}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </section>
         </header>
 
         <main>
