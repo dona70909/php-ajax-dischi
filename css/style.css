@@ -8,6 +8,13 @@ header {
     width: 2rem;
 }
 
+.my-select {
+    height: 100%;
+    align-self: end;
+    width: 100%;
+}
+
+
 main {
     padding: 2rem;
     background-color: rgb(30, 45, 59);
