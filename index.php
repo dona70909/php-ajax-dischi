@@ -33,7 +33,7 @@
                     </div>
                     <div class="col-5">
                         <select @change="changeGenere()" v-model="selectGenere" class="form-select" name="" id="">
-                            <option class="text-white bg-dark" value=""> All Artists </option>
+                            <option class="text-white bg-dark" value=""> All Genres </option>
                             <option class="text-white bg-dark" v-for = "genere in  generiDischi()" :value="genere">
                                 {{genere}}
                             </option>
