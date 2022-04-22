@@ -1,5 +1,8 @@
+<?php 
+    include_once __DIR__ . "/../php-ajax-dischi/server/dischi.php";
 
-
+    var_dump($db_dischi);
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
