@@ -26,7 +26,7 @@
 
     <div id ="app">
         <header>
-            <h1 class="m-0">Boolify</h1>
+            <img class="header-logo" src="css/img/logo-small.png" alt="logo">
         </header>
 
         <main>
