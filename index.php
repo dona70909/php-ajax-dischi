@@ -25,14 +25,8 @@
 <body>
 
     <div id ="app">
-
-
         <?php include_once __DIR__ . '/partials/header.php'?>
         <?php include_once __DIR__ . '/partials/main.php'?>
-
-       
-
-        
     </div>
     
 
