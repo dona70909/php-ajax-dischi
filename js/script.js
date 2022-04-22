@@ -57,11 +57,4 @@ const app = new Vue ({
         } 
     },
 
-    watch()  {
-        this.selectGenere;
-        this.changeGenere();
-        
-    }
-
-
 })
