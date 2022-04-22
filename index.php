@@ -34,10 +34,11 @@
                 <div class="row">
                     <div class="col-12 d-flex flex-wrap dischi-wrapper">
                         <div class="card" v-for ="disco in dischi">
-                            <img class="card-img-top img-fluid" :src="disco.poster" :alt="disco.title">
-                            <div class="card-body">
+                            <img class="card-img-top" :src="disco.poster" :alt="disco.title">
+                            <div class="card-body text-center">
                                 <h5 class="card-title">{{disco.title}}</h5>
-                                <p class="card-text">{{disco.year}}</p>
+                                <p class="card-artist mb-0">{{disco.author}}</p>
+                                <p class="card-year">{{disco.year}}</p>
                             </div>
                         </div>
                     </div>
