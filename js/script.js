@@ -6,7 +6,7 @@ const app = new Vue ({
         return {
             dischi : [],
 
-            selectGenere : "Rock",
+            selectGenere : "",
 
             filteredDischi : [],
 
@@ -18,16 +18,17 @@ const app = new Vue ({
         axios.get("http://localhost/php-ajax-dischi/server/dischi.php")
         .then((response) => {
             this.dischi = response.data.response;
-            console.log(response);
+            //console.log(response);
         })
         .catch((error) => {
             console.error(error);
-        })
+        }),
 
-        axios.get('http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=' + selectGenere)
+        console.warn("http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=" + this.changeGenere());
+        axios.get('http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=' + this.changeGenere())
         .then((response) => {
             this.filteredDischi = response.data.response;
-            console.log(response);
+            console.warn("http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=" + this.changeGenere());
         })
         .catch((error) => {
             console.error(error);
@@ -44,6 +45,10 @@ const app = new Vue ({
             });
 
             return this.listGeneri;
+        },
+
+        changeGenere() {
+            return this.selectGenere;
         }
     },
 

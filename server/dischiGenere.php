@@ -20,11 +20,15 @@
 
     //echo filter_array($db_dischi,$genere);
 
-    if(isset($genere)) {
+    if(isset($genere) || (strlen($genere) != 0)) {
         echo json_encode([
             'response' => filter_array($db_dischi,$genere),
         ]);
-    } 
+    } else {
+        echo json_encode([
+            'response' => $db_dischi,
+        ]);
+    }
 
 
 

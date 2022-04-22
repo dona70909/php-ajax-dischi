@@ -32,13 +32,15 @@
                         <img class="header-logo" src="css/img/logo-small.png" alt="logo">
                     </div>
                     <div class="col-5">
-                        <select v-model="selectGenere" class="form-select" name="" id="">
+                        <select @change="changeGenere()" v-model="selectGenere" class="form-select" name="" id="">
                             <option class="text-white bg-dark" value=""> All Artists </option>
                             <option class="text-white bg-dark" v-for = "genere in  generiDischi()" :value="genere">
                                 {{genere}}
                             </option>
                         </select>
                     </div>
+
+                    <p>{{selectGenere}}</p>
                 </div>
             </section>
         </header>
@@ -47,7 +49,7 @@
             <section class="container-fluid">
                 <div class="row">
                     <div class="col-12 d-flex flex-wrap dischi-wrapper">
-                        <div class="card" v-for ="disco in dischi">
+                        <div class="card" v-for ="disco in filteredDischi">
                             <img class="card-img-top" :src="disco.poster" :alt="disco.title">
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{disco.title}}</h5>
