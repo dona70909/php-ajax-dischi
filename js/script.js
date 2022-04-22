@@ -25,8 +25,7 @@ const app = new Vue ({
 
         axios.get('http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=' + this.selectGenere)
         .then((response) => {
-            this.filteredDischi = response.data.response;    
-            console.error(this.selectGenere + "noy ")       
+            this.filteredDischi = response.data.response;        
         })
         .catch((error) => {
             console.error(error);
