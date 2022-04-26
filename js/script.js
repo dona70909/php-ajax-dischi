@@ -15,14 +15,6 @@ const app = new Vue ({
     },
 
     mounted() {
-        axios.get("http://localhost/php-ajax-dischi/server/dischi.php")
-        .then((response) => {
-            this.dischi = response.data.response;
-        })
-        .catch((error) => {
-            console.error(error);
-        }),
-
         axios.get('http://localhost/php-ajax-dischi/server/dischiGenere.php?genere=' + this.selectGenere)
         .then((response) => {
             this.filteredDischi = response.data.response;    
@@ -36,7 +28,7 @@ const app = new Vue ({
     methods: {
         
         generiDischi() {
-            this.dischi.forEach(element => {
+            this.filteredDischi.forEach(element => {
                 if(!this.listGeneri.includes(element.genre)) {
                     this.listGeneri.push(element.genre);
                 }
