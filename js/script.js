@@ -4,12 +4,9 @@ const app = new Vue ({
 
     data() {
         return {
-            dischi : [],
 
             selectGenere : "",
-
             filteredDischi : [],
-
             listGeneri: [],
         }
     },
